@@ -1,29 +1,28 @@
+The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
+
+One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Here are the data for the project:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+
+
 run_analysis.R  does the following.
 
+Asssumes that the data is in raw format as downloaded from the web, located in the same folder that the run_analysis.R file
+        
+        ./run_anlalysis.R
+        ./UCI HAR Dataset
+
+The script:
+
 1. Merges the training and the test sets to create one data set.
-
-        Asssumes that the data is in raw format as downloaded from the web, located
-        in the same folder that the run_analysis.R file
-        
-        As two follwo the instructions:
-        The train and test data are individually built, concatenating the different files
-        
-        - subject_train.txt is the first column of final set column name subject (person ID) 
-        - y_train.txt is the next column, test lables, this will be replaced by activity lables
-          and the column name will be named activity
-        - x_train.txt contains the data set, columns in the final data,  features.txt is to 
-          be used as the column names of the 
-          
-          After the process has been follow for train and test data sets, both tables are join
-          in a final table call Data_set_total.csv
-
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-
-        Uses the column selection to select columns that only contain either mean and \
-        standard deviation
-        
-This was already preformed in point 1, so skip (3 and 4).
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
-
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Produces a file tidy_data.csv on the working directory
